@@ -1,0 +1,298 @@
+/* Custom CSS for SEO Tools Company Website */
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDelay {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDelay2 {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    70% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation classes */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-fade-in-delay {
+    animation: fadeInDelay 1.5s ease-out;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeInDelay2 2s ease-out;
+}
+
+/* Service card hover effects */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* Navigation active state */
+nav a.active {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* Testimonials carousel */
+.testimonials-container {
+    overflow: hidden;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+    flex-shrink: 0;
+}
+
+/* Testimonial dots */
+.testimonial-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-dot:hover {
+    transform: scale(1.2);
+}
+
+.testimonial-dot.active {
+    background-color: #3b82f6;
+    transform: scale(1.2);
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .mobile-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+}
+
+/* Loading animation for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Custom button hover effects */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Section reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Floating animation for icons */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Custom selection color */
+::selection {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Print styles */
+@media print {
+    nav,
+    .testimonial-dot,
+    button {
+        display: none !important;
+    }
+    
+    body {
+        color: black !important;
+        background: white !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .text-gray-600 {
+        color: #000 !important;
+    }
+    
+    .text-gray-300 {
+        color: #000 !important;
+    }
+    
+    .bg-gray-50 {
+        background-color: #fff !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .animate-fade-in,
+    .animate-fade-in-delay,
+    .animate-fade-in-delay-2 {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

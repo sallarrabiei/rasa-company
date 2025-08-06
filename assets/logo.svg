@@ -1,0 +1,11 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="25" fill="#3B82F6"/>
+  
+  <!-- Magnifying glass icon -->
+  <path d="M20 20L35 35M35 20C35 27.732 28.732 34 21 34C13.268 34 7 27.732 7 20C7 12.268 13.268 6 21 6C28.732 6 35 12.268 35 20Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text -->
+  <text x="70" y="25" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">SEO</text>
+  <text x="70" y="45" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#3B82F6">Tools</text>
+</svg>
